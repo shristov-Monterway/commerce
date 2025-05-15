@@ -170,4 +170,4 @@ The authentication API is implemented in the `lib/auth.ts` file, which provides 
 - `getCurrentUser`: Get the current user's Firestore document
 \`\`\`
 
-Let's create the database structure documentation:
+Let's fix the documentation/database-structure.md file:

@@ -2,56 +2,147 @@
 
 ## Introduction
 
-This e-commerce platform is designed to provide a global shopping experience with multi-language and multi-currency support. It allows users to browse products, make purchases, and manage their accounts in their preferred language and currency.
+The e-commerce platform is a comprehensive solution for building and managing an online store with support for multiple languages and currencies. It is built with modern web technologies and follows best practices for performance, security, and user experience.
 
 ## Key Features
 
-- **Multi-language Support**: The platform supports multiple languages, with all text content stored in language-specific JSON files.
-- **Multi-currency Support**: Users can view prices in their preferred currency, with automatic conversion based on current exchange rates.
-- **Authentication**: Multiple authentication methods including email/password, Google, and phone authentication.
-- **Product Management**: Comprehensive product management with support for categories, tags, and inventory tracking.
-- **Shopping Cart**: Client-side shopping cart with persistent storage.
-- **Checkout Process**: Secure checkout process with Stripe integration.
-- **User Accounts**: User account management with order history and address management.
-- **Admin Panel**: Administrative interface for managing products, categories, and orders.
+### Multi-language Support
+
+The platform supports multiple languages, allowing customers to browse and shop in their preferred language. Key features include:
+
+- Language selection in the header
+- Language-specific URLs (e.g., `/en/products`, `/fr/products`)
+- Automatic translation generation using AI
+- Language-specific product and category content
+
+### Multi-currency Support
+
+The platform supports multiple currencies, allowing customers to view prices in their preferred currency. Key features include:
+
+- Currency selection in the header
+- Automatic currency conversion using exchange rates
+- Currency-specific price formatting
+
+### Product Management
+
+The platform provides comprehensive product management capabilities, including:
+
+- Product variations with different attributes (size, color, etc.)
+- Product categories and tags
+- Product images and galleries
+- Product inventory management
+- Product search and filtering
+
+### Shopping Cart
+
+The platform includes a full-featured shopping cart, including:
+
+- Add to cart functionality
+- Cart item management (update quantity, remove items)
+- Cart summary with subtotal, tax, and shipping
+- Persistent cart storage
+
+### Checkout Process
+
+The platform provides a secure checkout process, including:
+
+- Address collection
+- Shipping method selection
+- Payment processing with Stripe
+- Order confirmation
+
+### User Accounts
+
+The platform includes user account management, including:
+
+- User registration and login
+- Multiple authentication methods (email/password, Google, phone)
+- User profile management
+- Order history
+- Address management
+
+### Admin Panel
+
+The platform includes an admin panel for managing the store, including:
+
+- Product management
+- Category management
+- Order management
+- User management
+- Store settings
 
 ## Technology Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS
-- **Backend**: Next.js API routes, Firebase Cloud Functions
-- **Database**: Firebase Firestore
-- **Authentication**: Firebase Authentication
-- **Storage**: Firebase Storage
-- **Payment Processing**: Stripe
-- **Internationalization**: Custom i18n implementation with JSON files
-- **State Management**: Zustand
-- **Deployment**: Vercel
+### Frontend
+
+- **Next.js**: React framework for server-side rendering and static site generation
+- **React**: JavaScript library for building user interfaces
+- **Tailwind CSS**: Utility-first CSS framework
+- **Zustand**: State management library
+
+### Backend
+
+- **Next.js API Routes**: Serverless functions for API endpoints
+- **Firebase Cloud Functions**: Serverless functions for background processing
+
+### Database
+
+- **Firebase Firestore**: NoSQL database for storing product, category, user, and order data
+
+### Authentication
+
+- **Firebase Authentication**: Authentication service for user management
+
+### Storage
+
+- **Firebase Storage**: File storage for product images and other assets
+
+### Payment Processing
+
+- **Stripe**: Payment processing service
+
+### Internationalization
+
+- **Custom i18n Implementation**: Custom internationalization system with JSON files and AI-powered translation generation
+
+### Deployment
+
+- **Vercel**: Hosting and deployment platform
 
 ## Project Structure
 
-The project follows the Next.js App Router structure:
+The project follows a standard Next.js project structure with some additional directories for specific features:
 
-- `app/`: Contains the application routes and pages
-- `components/`: Reusable React components
+- `app/`: Next.js App Router pages and layouts
+- `components/`: React components
+- `context/`: React context providers
+- `hooks/`: Custom React hooks
 - `lib/`: Utility functions and API clients
-- `public/`: Static assets
 - `messages/`: Translation files
-- `config/`: Configuration files, with `app-config.tsx` as the central configuration file
+- `public/`: Static assets
 - `scripts/`: Utility scripts
-- `documentation/`: Project documentation
+- `styles/`: Global styles
+- `types/`: TypeScript type definitions
+- `config/`: Application configuration
 
-## Configuration
+## Development Workflow
 
-All project configuration is centralized in the `config/app-config.tsx` file. This includes:
+The development workflow is designed to be efficient and collaborative:
 
-- Store information (name, description)
-- Currency settings (default currency, supported currencies)
-- Language settings (default language, supported languages)
-- Firebase configuration
-- Stripe configuration
-- Exchange rate API configuration
-- Base URL
-- OpenAI API configuration for translations
-- Application paths
+1. **Local Development**: Developers work on features locally using the Firebase Emulator for testing
+2. **Code Review**: Pull requests are reviewed by team members
+3. **Continuous Integration**: Automated tests are run on pull requests
+4. **Deployment**: Changes are deployed to production after approval
 
-The configuration file uses environment variables for sensitive information, but all configuration access throughout the application should go through this file.
+For more details on the development workflow, see the [Development Guidelines](./development-guidelines.md) documentation.
+
+## Future Roadmap
+
+The platform is continuously evolving with new features and improvements. Some planned features include:
+
+- **Product Reviews**: Allow customers to leave reviews for products
+- **Wishlist**: Allow customers to save products for later
+- **Advanced Search**: Implement full-text search for products
+- **Personalization**: Implement personalized product recommendations
+- **Analytics**: Implement advanced analytics for store performance
+- **Marketing Tools**: Implement marketing tools like email campaigns and discount codes

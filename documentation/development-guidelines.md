@@ -107,14 +107,16 @@ When adding new configuration values:
 
 ### Adding New Translations
 
-1. Add new messages to the English translation file (`messages/en.json`)
-2. Run the translation script to generate translations for other languages:
+1. Edit only the `messages/en.json` file to add, modify, or remove messages.
+2. Run the translation script to update all other language files:
 
 \`\`\`bash
+# Make sure you have the OPENAI_API_KEY environment variable set
+export OPENAI_API_KEY=your_openai_api_key
+
+# Run the translation script
 npm run translate
 \`\`\`
-
-3. Review and adjust the generated translations if necessary
 
 ### Using Translations
 
@@ -195,3 +197,6 @@ npm run translate
 - Document API endpoints
 - Document environment variables
 - Document deployment process
+\`\`\`
+
+Let's fix the documentation/deployment.md file:

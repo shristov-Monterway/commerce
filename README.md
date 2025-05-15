@@ -82,7 +82,6 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
 STRIPE_SECRET_KEY=your-stripe-secret-key
 STRIPE_WEBHOOK_SECRET=your-stripe-webhook-secret
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
-EXCHANGE_RATE_API_KEY=your-exchange-rate-api-key
 OPENAI_API_KEY=your-openai-api-key
 \`\`\`
 
@@ -149,6 +148,7 @@ For detailed documentation, see the [documentation](./documentation) directory:
 - [Deployment](./documentation/deployment.md)
 - [Development Guidelines](./documentation/development-guidelines.md)
 - [Firebase Emulator](./documentation/firebase-emulator.md)
+- [Translation Management](./documentation/translation-management.md)
 
 ## License
 
@@ -162,3 +162,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Firebase](https://firebase.google.com/)
 - [Stripe](https://stripe.com/)
 - [OpenAI](https://openai.com/)
+\`\`\`
+
+Now, let's fix the documentation/architecture.md file:

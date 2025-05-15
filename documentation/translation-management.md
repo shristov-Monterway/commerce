@@ -73,4 +73,4 @@ The translation files use a nested structure for organization:
 - If the script fails to run, make sure you have all the required dependencies installed.
 \`\`\`
 
-Now, let's update the internationalization.md file to reference the new translation-management.md file:
+Let's fix the documentation/firebase-emulator.md file:

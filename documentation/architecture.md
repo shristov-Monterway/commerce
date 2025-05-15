@@ -53,6 +53,3 @@ The API is implemented using Next.js API routes, which serve as a backend for th
 ## Database Architecture
 
 The database is implemented using Firebase Firestore, with collections for products, categories, users, orders, and other entities. See the [Database Structure](./database-structure.md) documentation for details.
-\`\`\`
-
-Now, let's create the internationalization documentation:

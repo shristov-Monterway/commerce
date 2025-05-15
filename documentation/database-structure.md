@@ -35,15 +35,9 @@ The `products` collection stores product information.
 - `name`: TranslatedText - Product name in multiple languages
 - `description`: TranslatedText - Product description in multiple languages
 - `slug`: TranslatedText - URL-friendly product name in multiple languages
-- `price`: number - Product price in cents
-- `compareAtPrice`: number | null - Original price for sale items, in cents
-- `images`: string[] - Array of image URLs
 - `categoryIds`: string[] - Array of category IDs
 - `tags`: ProductTag[] - Array of product tags
-- `weight`: number - Product weight in grams
-- `sku`: string - Stock keeping unit
-- `inventory`: number - Number of items in stock
-- `isActive`: boolean - Whether the product is active
+- `variations`: ProductVariationType[] - Array of product variations
 - `createdAt`: number - Timestamp of when the product was created
 - `updatedAt`: number - Timestamp of when the product was last updated
 
@@ -129,6 +123,7 @@ interface Address {
 \`\`\`typescript
 interface OrderItem {
   productId: string;
+  variationId: string;
   productSnapshot: {
     name: TranslatedText;
     price: number;
@@ -145,6 +140,34 @@ interface OrderItem {
 interface ProductTag {
   id: string;
   name: TranslatedText;
+}
+\`\`\`
+
+### ProductVariationType
+
+\`\`\`typescript
+interface ProductVariationType {
+  id: string;
+  name: TranslatedText;
+  description: TranslatedText;
+  slug: string;
+  price: number;
+  compareAtPrice: number | null;
+  images: string[];
+  weight: number;
+  sku: string;
+  inventory: number;
+  isActive: boolean;
+  createdAt: number;
+  updatedAt: number;
+  attributes: {
+    id: string;
+    name: TranslatedText;
+    options: {
+      id: string;
+      name: TranslatedText;
+    }[];
+  }[];
 }
 \`\`\`
 
@@ -175,7 +198,7 @@ The following indexes are required for the application to function properly:
 - Products belong to one or more categories (via `categoryIds`)
 - Categories can have a parent category (via `parentId`)
 - Orders belong to a user (via `userId`)
-- Order items reference products (via `productId`)
+- Order items reference products (via `productId`) and variations (via `variationId`)
 \`\`\`
 
-Let's create the API reference documentation:
+Let's fix the documentation/api-reference.md file:

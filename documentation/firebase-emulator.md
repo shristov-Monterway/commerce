@@ -113,4 +113,4 @@ If you're having trouble connecting to the Firestore emulator:
 3. Look for any CORS errors in your browser console
 \`\`\`
 
-Let's update the main README.md to include a link to the Firebase emulator documentation:
+Let's fix the documentation/development-guidelines.md file:

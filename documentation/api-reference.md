@@ -241,3 +241,6 @@ function formatPrice(priceInCents: number, currency: string): string
 \`\`\`
 
 Formats a price for display, including the currency symbol.
+\`\`\`
+
+Let's fix the documentation/internationalization.md file:

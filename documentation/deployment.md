@@ -11,7 +11,6 @@ Before deploying, you need:
 1. A Firebase project with Firestore, Authentication, and Storage enabled
 2. A Stripe account
 3. An OpenAI API key (for translation generation)
-4. An Exchange Rate API key
 
 ## Environment Variables
 
@@ -35,7 +34,6 @@ The following environment variables are required for deployment. These variables
 ### Other Configuration
 
 - `NEXT_PUBLIC_BASE_URL`: Base URL of the application (e.g., https://example.com)
-- `EXCHANGE_RATE_API_KEY`: API key for the exchange rate API
 - `OPENAI_API_KEY`: OpenAI API key for translation generation
 
 All these environment variables are accessed through the central configuration file `config/app-config.tsx`, which serves as the single source of truth for all configuration values in the application.
@@ -111,7 +109,7 @@ Then deploy the updated translation files.
 1. **Firebase Authentication Issues**: Check Firebase Authentication configuration and security rules
 2. **Stripe Webhook Issues**: Verify webhook endpoint and secret
 3. **Translation Issues**: Check OpenAI API key and translation script
-4. **Exchange Rate Issues**: Check Exchange Rate API key and API availability
+4. **Exchange Rate Issues**: Check Exchange Rate API availability
 
 ### Getting Help
 
@@ -123,4 +121,4 @@ If you encounter issues, check:
 4. Project issues on GitHub
 \`\`\`
 
-Let's update the development guidelines:
+Let's fix the documentation/project-overview.md file:
